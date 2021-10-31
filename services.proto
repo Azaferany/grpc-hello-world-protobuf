@@ -8,6 +8,7 @@ message MultiplyRequest {
 message MultiplyResult {
    int32 Result = 1;
 }
+
 service Calculator {
    rpc Multiply (MultiplyRequest) returns (MultiplyResult);
 }
