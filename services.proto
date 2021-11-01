@@ -1,0 +1,14 @@
+syntax = "proto3";
+package grpc_hello_world.v1;
+
+message UserRequest {
+   int32 Id = 1;
+}
+message UserResult {
+   int32 Id = 1;
+   string UserName = 2;
+   string Email = 3;
+}
+service UserManger {
+   rpc GetUser (UserRequest) returns (UserResult);
+}
